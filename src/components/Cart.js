@@ -7,11 +7,12 @@ import {removeFromCart} from "../redux/actions/cart";
 
 function Cart(){
 
-    const {cartItems,quantity}=useSelector(({cart})=>cart)
+    const {cartItems}=useSelector(({cart})=>cart)
     const dispatch=useDispatch()
 
     function handleRemove(index){
         dispatch(removeFromCart(index))
+        console.log(cartItems.length)
      }
 
 
@@ -20,14 +21,12 @@ function Cart(){
     return(
        <div>
 
-           {quantity===0
+           {cartItems.length===0
                ? <img src={empty} alt="Cart is empty"/>
 
                :
                <div>{cartItems.map((obj)=>
-                   <CartItem key={cartItems.indexOf(obj)} id={obj.id} name={obj.name}
-                             img={obj.img} price={obj.price}
-                             category={obj.category} remove={handleRemove} index={cartItems.indexOf(obj)}/>)}</div>
+                   <CartItem key={cartItems.indexOf(obj)} {...obj} remove={handleRemove} />)}</div>
            }
 
        </div>
