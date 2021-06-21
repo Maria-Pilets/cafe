@@ -8,7 +8,7 @@ function CartItem({name,price,img,remove,index}){
     const onClickItem=()=>{
 
         remove(index)
-        console.log(index)
+
 
     }
 
