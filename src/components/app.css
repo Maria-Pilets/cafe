@@ -1,0 +1,27 @@
+.content {
+  padding: 40px 0;
+}
+.content__title {
+  margin: 35px 0;
+}
+.content__items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+.content__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.contentitems {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.main {
+  background-color: #D7A2EA;
+}
+
+/*# sourceMappingURL=app.css.map */

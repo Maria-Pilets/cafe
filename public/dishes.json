@@ -1,0 +1,139 @@
+{
+  "dishes": [
+    {
+      "name": "Pizza",
+      "price": 20,
+      "imgsrc": "https://yoyopizza.ru/public/img/products/pizza/clubnaya0.jpg",
+      "id": 1,
+      "isMostOrdered": true,
+      "quantity": 0,
+      "category": "dinner"
+    },
+    {
+      "name": "Burger",
+      "price": 10,
+      "imgsrc": "https://images.pexels.com/photos/1251198/pexels-photo-1251198.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "id": 2,
+      "isMostOrdered": true,
+      "quantity": 0,
+      "category": "dinner"
+    },
+    {
+      "name": "Fries",
+      "price": 9.5,
+      "imgsrc": "https://images.pexels.com/photos/115740/pexels-photo-115740.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "id": 3,
+      "isMostOrdered": false,
+      "quantity": 0,
+      "category": "snack"
+    },
+    {
+      "name": "Sushi",
+      "price": 16,
+      "imgsrc": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShYorac2uil_Y_cm6ylHICs0jt_9JsUwAnA0xcKPddGc8jlTXgCcEul9T0UrkhkL6gYC8&usqp=CAU",
+      "id": 4,
+      "isMostOrdered": true,
+      "quantity": 0,
+      "category": "snack"
+    },
+    {
+      "name": "Icecream",
+      "price": 3,
+      "imgsrc": "https://images.pexels.com/photos/461430/pexels-photo-461430.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=350",
+      "id": 5,
+      "isMostOrdered": false,
+      "quantity": 0,
+      "category": "dessert"
+    },
+    {
+      "name": "Juice",
+      "price": 2,
+      "imgsrc": "https://images.pexels.com/photos/109275/pexels-photo-109275.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=350",
+      "id": 6,
+      "isMostOrdered": false,
+      "quantity": 0,
+      "category": "beverage"
+    },
+    {
+      "name": "Spicy chicken with rice and beans",
+      "price": 15,
+      "imgsrc": "https://images.eatthismuch.com/site_media/img/34196_tabitharwheeler_0cee9d56-c8fb-402c-8812-8948e7563d6c.jpg",
+      "id": 7,
+      "isMostOrdered": false,
+      "quantity": 0,
+      "category": "dinner"
+    },
+    {
+      "name": "Greek salad",
+      "price": 13,
+      "imgsrc": "https://www.olivetomato.com/wp-content/uploads/2019/06/Best-Greek-Salad-Recipe-1.jpg",
+      "id": 8,
+      "isMostOrdered": true,
+      "quantity": 0,
+      "category": "snack"
+    },
+    {
+      "name": "Coca Cola",
+      "price": 2,
+      "imgsrc": "https://www.drankgigant.nl/media/catalog/product/cache/5302153a4b78cff75d07c130fe2dbf33/s/c/schermafbeelding_2016-08-26_om_13.00.06.png",
+      "id": 9,
+      "isMostOrdered": false,
+      "quantity": 0,
+      "category": "beverage"
+    },
+    {
+      "name": "Broccoli cream soup",
+      "price": 4.5,
+      "imgsrc": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIY1oQ9OnBf2H448i9-mgaPm81eTQb__sWFw&usqp=CAU",
+      "id": 10,
+      "isMostOrdered": true,
+      "quantity": 0,
+      "category": "dinner"
+    },
+    {
+      "name": "Lasagna Bolognese",
+      "price": 12,
+      "imgsrc": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQFpdy2mAxWa7f-Bot6g4WtPpkXOLmFKGqRQ&usqp=CAU",
+      "id": 11,
+      "isMostOrdered": true,
+      "quantity": 0,
+      "category": "dinner"
+    },
+    {
+      "name": "Glazed doughnuts",
+      "price": 4.5,
+      "imgsrc": "https://s3.envato.com/files/8316e6c4-8609-40f9-ba95-d89296059103/inline_image_preview.jpg",
+      "id": 12,
+      "isMostOrdered": false,
+      "quantity": 0,
+      "category": "dessert"
+    },
+    {
+      "name": "Tiramisu",
+      "price": 8,
+      "imgsrc": "https://reston.ua/images/img/tiramisu.jpg",
+      "id": 13,
+      "isMostOrdered": false,
+      "quantity": 0,
+      "category": "dessert"
+    },
+    {
+      "name": "Cheese assorti",
+      "price": 14,
+      "imgsrc": "https://previews.123rf.com/images/vittavat/vittavat1312/vittavat131200011/24537894-assorted-cheese-and-dried-fruits-on-a-wooden-board.jpg",
+      "id": 14,
+      "isMostOrdered": true,
+      "quantity": 0,
+      "category": "snack"
+    },
+    {
+      "name": "Fruit assorti",
+      "price": 12,
+      "imgsrc": "https://images.pexels.com/photos/1132047/pexels-photo-1132047.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "id": 15,
+      "isMostOrdered": true,
+      "quantity": 0,
+      "category": "snack"
+    }
+  ]
+}
