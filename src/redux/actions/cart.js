@@ -1,13 +1,13 @@
-export const addToCart =(index)=> {
+export const addToCart =(payload)=> {
     return {
         type: 'ADD_TO_CART',
-        payload:index
+        payload
     };
 };
-export const removeFromCart = index => {
+export const removeFromCart = id => {
     return {
         type: 'REMOVE_FROM_CART',
-        payload:index,
+        payload:id,
     };
 };
 export const subtractQuantity = id => {

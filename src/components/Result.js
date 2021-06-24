@@ -8,6 +8,9 @@ const Result=({price,name,err,img,id,onAdd,category,index})=>{
     const onClickItem=()=>{
         const dishObj={name,price,id,category,img,index}
         onAdd(dishObj)
+        Object.values(dishObj).forEach(val => {
+            console.log(val);
+        });
     }
 
     if(!err){
@@ -18,7 +21,7 @@ const Result=({price,name,err,img,id,onAdd,category,index})=>{
                     <img className="result_divimg" src={img}/>
                     <h2 className="result_name">{price}$</h2>
                     <button className="button" onClick={onClickItem}>Add to basket</button>
-                    <i></i>
+                    <i/>
                 </div>
         )
     }
