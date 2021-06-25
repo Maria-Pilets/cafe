@@ -3,6 +3,7 @@ import empty from './../empty.jpg'
 import {useDispatch, useSelector} from "react-redux";
 import CartItem from "./CartItem";
 import {addQuantity, removeFromCart, subtractQuantity, emptyCart} from "../redux/actions/cart";
+import {Link} from "react-router-dom";
 
 
 function Cart() {
@@ -35,9 +36,13 @@ function Cart() {
 
 
     return (
-        <div>
 
-        {
+        <div>
+            <div><Link to="/" >
+                <span>Back to menu</span>
+            </Link> </div>
+
+            {
             cartItems.length === 0
             ?
                 <img src={empty} alt="Cart is empty"/>
@@ -55,6 +60,7 @@ function Cart() {
                     <button onClick={handleClearCart}>Clear cart</button>
                 </div>
                 <div>To pay {totalPrice} $</div>
+
             </div>}
 
 

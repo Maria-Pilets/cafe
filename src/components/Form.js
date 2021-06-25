@@ -6,7 +6,7 @@ const Form=({ onChangeInput})=>{
 
     return(
           <form >
-              <input  type="text" onChange={onChangeInput}
+              <input type="text" onChange={onChangeInput}
               placeholder="Search for a dish"/>
           </form>
 

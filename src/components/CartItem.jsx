@@ -2,17 +2,17 @@ import React from "react";
 import './Result.css'
 
 
+
 function CartItem({name,price,img,quantity,remove,id,plusItem,minusItem}){
+
+
 
 
     const onClickItem=()=>{
         const dishObj={name,price,id,img,quantity}
         remove( dishObj)
-
-        console.log(dishObj)
-
-
     }
+
     function TotalPrice(price,tonggia){
         return Number(price * tonggia).toLocaleString('en-US');
     }
