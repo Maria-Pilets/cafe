@@ -1,20 +1,60 @@
-import React from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import './app.css'
+import {useDispatch, useSelector} from "react-redux";
 
 
 
-function Sort({items,onSelectSort}){
 
-    function onClickItem(name){
-        onSelectSort(name)
-        console.log(name)
+function Sort({onSelectSort,sortType,sortItems}){
+
+
+
+    const sortRef=useRef(null)
+
+
+    const [visible,setVisible]=useState(false)
+
+    function handleOutsideClick(event){
+        if (
+            sortRef.current &&
+            !sortRef.current.contains(event.target)
+        )
+        {
+                setVisible(false)
+        }
+    }
+
+    useEffect(() => {
+        if (visible){
+            document.addEventListener("mousedown", handleOutsideClick);
+        } else {
+            document.removeEventListener("mousedown", handleOutsideClick);
+        }
+
+        return () => {
+            document.removeEventListener("mousedown", handleOutsideClick);
+        };
+    }, [visible]);
+
+
+
+    function onClickItem(index){
+        onSelectSort(index)
+
+        setVisible(false)
+    }
+
+
+    function onClickButton(e){
+        setVisible(true)
     }
     return (
         <div className="dropdown">
-            <button onClick={onClickItem} className="dropbtn">Sort by</button>
-            <div id="myDropdown" className="dropdown-content show ">
-                {items.map((i,index)=> <a href="#" key={index}>{i.name}</a>)}
-            </div>
+            <button  onClick={onClickButton}   className="dropbtn">Sort by</button>
+            {visible &&
+            <div ref={sortRef}  className="dropdown-content show ">
+                {sortItems.map((i,index)=> <a href="#" key={index} onClick={onClickItem} >{i.name}</a>)}
+            </div>}
         </div>
     )
 }

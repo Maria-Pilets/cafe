@@ -5,12 +5,10 @@ import Result from "./Result";
 import {useState, useEffect} from "react"
 import Category from "./Category";
 import {Link} from "react-router-dom";
-import {useDispatch} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import {addToCart} from "../redux/actions/cart";
 import loading from './../loading.gif'
 import Sort from "./Sort";
-import {sortBy} from "../redux/actions/sort";
-
 
 const categories = ['All', 'Dinner', 'Snack', 'Dessert', 'Beverage']
 
@@ -19,6 +17,7 @@ const sortItems=[{name:'by price',type:'price',order:'desc'},
 
 function Home() {
 
+    const {sortBy}=useSelector(({sort})=>sort)
 
     const dispatch = useDispatch()
 
@@ -33,10 +32,15 @@ function Home() {
     const [search, setSearch] = useState('')
     const [filteredDishes, setFilteredDishes] = useState([])
     const [activeCategory, setActiveCategory] = useState(0)
+    const [activeSort,setSort]=useState(0)
 
     const chooseCategory = (e) => {
         setActiveCategory(e)
         setSearch('')
+    }
+
+    const sortDishes=(e)=>{
+        setSort(e)
     }
 
 
@@ -46,15 +50,10 @@ function Home() {
     }
 
 
-    const onClickSort=(name)=>{
-        dispatch(sortBy(name))
-        console.log(name)
-    }
-
 
 
     useEffect(() => {
-        fetch(`https://cafe-35e87-default-rtdb.firebaseio.com/dishes.json`, {
+        fetch(`https://cafe-2bad7-default-rtdb.firebaseio.com/dishes.json`, {
             method: "GET",
 
             headers: {
@@ -88,7 +87,12 @@ function Home() {
                     return dish.name.toLowerCase().includes(search)
                 }))
         }
-    }, [activeCategory, search])
+        if(activeSort){
+            setFilteredDishes(
+              dishes.sort()
+            )
+        }
+    }, [activeCategory, search,activeSort])
 
 
     if (error) {
@@ -108,14 +112,14 @@ function Home() {
 </div>
 
             <div className="sort">
-                    <Sort items={sortItems} onSelectSort={onClickSort}/>
+                    <Sort sortItems={sortItems} sortType={sortBy.type} onSelectSort={sortDishes}/>
             </div>
             <div className="content-top">
                 <Category items={categories} onClickCategory={chooseCategory} activeCategory={activeCategory}/>
 
             <div className="content-items">
 
-                {activeCategory === 0 && !search ?
+                {activeCategory === 0 && !search  && !activeSort?
                     dishes.map((d, index) => (
                         <Result key={d.id} id={d.id} name={d.name} err={d.error} img={d.imgsrc} onAdd={handleAddToCart}
                                 price={d.price} category={d.category} index={index}/>

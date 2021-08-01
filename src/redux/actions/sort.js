@@ -1,7 +1,7 @@
-export const sortBy= (payload)=>{
+export const sort= ({type,order})=>{
     return{
-        type:'SORT_BY',
-        payload
+        type:'SORT',
+        payload:{type,order}
     }
 
 }

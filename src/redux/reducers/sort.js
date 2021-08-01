@@ -1,4 +1,5 @@
 const initialState={
+    items:[],
     sortBy:{
         type:'price',
         order:'desc'
@@ -8,8 +9,11 @@ const initialState={
 
 const sort=(state=initialState,action)=>{
     switch (action.type){
-        case 'SORT_BY':{
-            return {...state,sortBy:action.payload}
+        case 'SORT': {
+            return {...state, sortBy: action.payload}
+        }
+        default:{
+            return state
         }
 
     }
